@@ -10,7 +10,7 @@ Este é o backend da aplicação tela segura com Express.js. Ele gerencia a lóg
  
 ## Tecnologias Utilizadas
 
-- [MongoDb](https://www.mongodb.com/pt-br/) - Banco de dados NoSQL para armazenar a fila de solicitações e bloquei da tela
+- [MongoDb](https://www.mongodb.com/pt-br/) - Banco de dados NoSQL para armazenar a fila de solicitações e bloqueio da tela
 - [Node.js](https://nodejs.org/) - Ambiente de execução JavaScript do lado do servidor
   - [Expre.IO](https://expressjs.com/) - Framework web minimalista para Node.js, permitindo construir rapidamente servidores web e APIs com uma sintaxe simples e uma vasta gama de middleware.
   - [Socket.IO](https://socket.io/) - WebSocket para comunicação bidirecional em tempo real entre o servidor e o cliente.
@@ -23,7 +23,7 @@ Este é o backend da aplicação tela segura com Express.js. Ele gerencia a lóg
    cd telasegura-backend
     ```
 2. Instale os pacotes utilizando o comando `npm install`
-3. Crie um arquivo `.env` na raiz do projeto e insira suas credencias. Utilize o arquivo `.env.example` como base.
+3. Crie um arquivo `.env` na raiz do projeto e insira suas credenciais. Utilize o arquivo `.env.example` como base.
 4. Execute o projeto com o comando `npm run dev`
 
 ### Frontend
