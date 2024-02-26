@@ -8,9 +8,6 @@
 
 Este é o backend da aplicação tela segura com Express.js. Ele gerencia a lógica de negócios, comunicação com o banco de dados e comunicação em tempo real com o frontend.
  
-
-Este projeto é um clone do repositório [redis-dba](https://github.com/guivahl/redis-dba), com algumas adições de funcionalidades.
-
 ## Tecnologias Utilizadas
 
 - [MongoDb](https://www.mongodb.com/pt-br/) - Banco de dados NoSQL para armazenar a fila de solicitações e bloquei da tela
