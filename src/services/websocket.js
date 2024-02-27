@@ -27,23 +27,26 @@ io.on("connection", (socket) => {
   });
 
   socket.on("liberatela", async (id) => {
-    
     await telaService.deletarRegistrosOcupados();
 
     console.log("deletando arquivos");
 
-    const socktIdLibera = (await telaService.encontrarSocketIdDataMaisAntiga()).socketId;
+    const registroAntigo = await telaService.encontrarSocketIdDataMaisAntiga();
 
-    await telaService.editarOcupadoParaTrue(socktIdLibera);
+    if (registroAntigo) {
+      const socktIdLibera = registroAntigo.socketId;
 
+      await telaService.editarOcupadoParaTrue(socktIdLibera);
 
-    io.to(socktIdLibera).emit("acessa", "Tela livre");
+      io.to(socktIdLibera).emit("acessa", "Tela livre");
+    }
   });
 
   socket.on("ultimaAtualizacao", async (id) => {
-    
     await telaService.atualizarUltimaSessao(socket.id);
-
   });
 
+  socket.on("liberaTelaBlock", async (id) => {
+    await telaService.deletarRegistroPorSocketId(socket.id);
+  });
 });

@@ -172,6 +172,29 @@ const telaService = {
       };
     }
   },
+
+  async deletarRegistroPorSocketId(socketId) {
+    try {
+      const resultado = await tela.deleteOne({ socketId });
+      if (resultado.deletedCount > 0) {
+        return {
+          success: true,
+          message: `Registro com o socketId ${socketId} deletado com sucesso.`,
+        };
+      } else {
+        return {
+          success: false,
+          message: `Nenhum registro encontrado com o socketId ${socketId}.`,
+        };
+      }
+    } catch (error) {
+      console.error("Erro ao deletar registro por socketId:", error);
+      return {
+        success: false,
+        message: "Erro ao deletar registro por socketId.",
+      };
+    }
+  },
 };
 
 export default telaService;
